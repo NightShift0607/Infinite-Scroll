@@ -1,10 +1,10 @@
-const imageContainer = document.querySelector("#image-conatiner");
+const imageContainer = document.querySelector("#image-container");
 const loader = document.querySelector("#loader");
 let photosArray = [];
 let ready = false;
 let imagesLoaded = 0;
 let totalImages = 0;
-const count = 10;
+const count = 20;
 const apiKey = "czHumbryuUYTccrdwZa53seguPxEc_vUZEZI76YyIaA";
 const apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${count}`;
 
@@ -20,7 +20,7 @@ function imageLoaded() {
 // Function to set images
 function setAttributes(element, attributes) {
   for (const key in attributes) {
-    element.setAttribute(key, attributes.key);
+    element.setAttribute(key, attributes[key]);
   }
 }
 
@@ -66,7 +66,6 @@ window.addEventListener("scroll", () => {
   ) {
     ready = false;
     getPhotos();
-    console.log("load");
   }
 });
 
