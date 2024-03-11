@@ -44,6 +44,33 @@ h1 {
   margin-top: 5px;
 }
 
+.footer {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-size: 1.8rem;
+  justify-content: space-around;
+}
+
+a {
+  color: #000;
+}
+
+a:hover {
+  color: #333;
+}
+
+.footer > img {
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+}
+
+.footer > img:hover {
+  content: url("./public/logo2.png");
+}
+
 @media screen and (max-width: 600px) {
   h1 {
     font-size: 20px;
